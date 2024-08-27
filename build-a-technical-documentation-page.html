@@ -1,0 +1,634 @@
+** start of undefined **
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initil-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Techinical Documentation of Baja</title>
+</head>
+<body>
+<nav id="navbar">
+  <header>
+    <h1><span class="Orange">B</span>a<span class="rotate">j</span>a</h1>
+  </header>
+  <a href="#Open_System_And_Interoperability_In_Building_Control" class="nav-link">Open System And Interoperability In Building Control</a>
+  <a href="#The_Promise" class="nav-link">The Promise</a>
+  <a href="#The_Issues" class="nav-link">The Issues</a>
+  <a href="#The_Background" class="nav-link">The Background</a>
+  <a href="#Why_Has_Building_Automation_Been_Different" class="nav-link">Why Has Building Automation Been Different</a>
+  <a href="#Today_Attempts" class="nav-link">Today Attempts</a>
+  <a href="#Too_Many_Protocols_But_No_One_To_Talk_To" class="nav-link">Too Many Protocols But No One To Talk To</a>
+  <a href="#The_Solution" class="nav-link">The Solution</a>
+  <a href="#Standard_Object_Model" class="nav-link">Standard Object Model</a>
+  <a href="#Baja_Is_This_Standard" class="nav-link">Baja Is This Standard</a>
+  <a href="#Anytime_Anywhere_Access" class="nav-link">Anytime Anywhere Access</a>  
+  <a href="#The_Opportunity_To_Move_Forward" class="nav-link">The Opportunity To Move Forward</a>
+  <a href="#Baja_Building_Automation_Java_Architecture" class="nav-link">Baja Building Automation Java Architecture</a>
+  <a href="#The_Evolution_Has_Begun" class="nav-link">The Evolution Has Begun</a>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="Open_System_And_Interoperability_In_Building_Control">
+    <header>Open System And Interoperability In Building Control</header>
+    <p>
+      Building control systems can make environments more comfortable, safe and efficient by
+integrating systems such as heating, air conditioning, lighting, security and
+telecommunications into one centrally controlled, automated system. In order to do this
+effectively different systems need to be able to communicate and interact with each other.
+    </p>
+  </section>
+  <section class="main-section" id="The_Promise">
+    <header>The Promise</header>
+    <p>
+      By integrating these control systems with intelligent software applications, buildings can
+become active structures that receive signals from diverse controlling and monitoring
+devices and then send those signals to the appropriate appliances and systems in the
+building. The result would be a building management system that allows administrators
+to do everything from setting lighting and air conditioning schedules to controlling
+energy usage via a standard web browser – <span class="italic">or better yet does it for the user
+automatically</span>.
+    </p>
+  </section>
+  <section class="main-section" id="The_Issues">
+    <header>The Issues</header>
+    <p>
+      Two issues have held the industry back from achieving this promise. One is the
+prevalence of different communications protocols currently embedded in automation
+devices. The other is a lack of software. As we will see these issues are related.
+    </p>
+    <p>
+      Software in the automation industry has not advanced at the rate in which that in the
+mainstream computer industry has. It is far more expensive and is not as mature. These
+issues are compounded by the fact that the software currently in use was not developed
+on an architecture that allows seamless use of the Internet and browser technology.
+    </p>
+  </section>
+  <section class="main-section" id="The_Background">
+    <header>The Background</header>
+    <p>
+      Unlike the computer industry there has not been a foundation or framework for
+independent software developers to build on in the automation industry. All software
+applications, by necessity, come from the supplier of the automation hardware. By
+comparison, the PC architecture and Microsoft Windows operating system in the
+mainstream computer market created a universal framework. This allowed developers to
+build software with universal application across a wide range of products and markets.
+Think what it would be like if your word processing application only worked on Dell
+computers (or Compaq or HP). This was the case with office computer systems like
+those from Digital Equipment and Wang before the PC revolution . History has shown
+that this is not a supportable paradigm. The PC revolution erased proprietary solutions
+from the map. More importantly, it erased the proprietary segmentation from the
+computer industry. Software became a tool that could be used across different
+manufacturers’ computers. The result was an unimaginable explosion of software and
+computer technology and a revolution in the way that business uses technology.
+    </p>
+  </section>
+  <section class="main-section" id="Why_Has_Building_Automation_Been_Different">
+    <header>Why Has Building Automation Been Different</header>
+    <p>So why has the building automation industry been immune to similar progress?</p>
+    <p class="bold">Protocols</p>
+    <p>First, the building automation industry is permeated with many different
+communication protocols. The major reason for this is related to growth of the
+building automation industry before the PC revolution. Available technology at the
+time required manufacturers to build highly proprietary solutions. There were no
+standard fieldbus network solutions or software object standards. In fact, the
+proprietary solutions manufacturers created used to be the competitive advantage of a
+company – they had created a solution where none existed.</p>
+    <p>Today the proprietary nature of these systems has become a ball and chain for
+everyone. Manufacturers spend the majority of R&D dollars building
+communications infrastructure over and over again for each new product line they
+develop while trying to maintain limited compatibility with their legacy systems.
+Consumers are forced to accept software with features and functionality that are
+severely outdated compared to the other applications they have on their desks.</p>
+    <p class="bold">The Economics Of Legacy Systems</p>
+    <p>Unlike the mainstream computer industry, where we update computers every three to
+four years, investments in embedded systems are expected to last for as much as 15
+years. This is partly due to engineering and installation costs, which can account for
+as much as 90 percent of the end user costs for the system − embedded devices
+themselves represent only 10 percent of the overall cost.</p>
+    <p>Because today’s competing systems are so proprietary, changeover to a new system
+means replacing the legacy system and involves enormous re-engineering and
+installation costs. The result is a “Catch 22” – economics don’t support upgrades to a
+new system. Even though the new systems are better, they are still proprietary.</p>
+  </section>
+  <section class="main-section" id="Today_Attempts">
+    <header>Today Attempts</header>
+    <p>Until recently, truly integrated building control systems were extremely difficult to
+create. Devices made by different manufacturers were unable to communicate with each
+other, much less allow users to access and integrate the data they provided. (See Fig.1)
+The trend in the building control industry has been to attempt to solve the integration
+problem through the use of limited open or “standard” communication protocols, which
+would allow users to integrate systems regardless of their manufacturer.</p>
+  </section>
+  <section class="main-section" id="Too_Many_Protocols_But_No_One_To_Talk_To">
+    <header>Too Many Protocols But No One To Talk To</header>
+    <p>At present, the movement to this completely open environment for building automation
+still has hurdles to overcome. Several initiatives to create standard communication
+protocols in building control devices (such as LonWorks and BACnet) have created
+opportunities for constructing open system environments. But these protocols, which are
+focused at the embedded device level, only provide interoperability when all of the
+devices (e.g., controllers for air conditioning units or security systems) are based on the
+specific communication protocol. (See Fig. 2) So while interoperability is achievable, it is
+segmented by the technology of the underlying hardware – this is not a solution for the
+consumer.</p>
+    <p>These emerging open system protocols have seen some success as an option for newly
+constructed buildings as long as system designers insure that all installed systems come
+from manufacturers who have embedded the chosen protocol in their hardware. New
+buildings, however, account for less than one percent of the market.</p>
+    <p>Older buildings, which account for a majority of the market, come with the previously
+mentioned legacy issues, which are very complex. Consequently, administrators choose
+to maintain their legacy systems rather than replace them, and are forced to work with the
+limited individual applications provided with these legacy systems.</p>
+  </section>
+  <section class="main-section" id="The_Solution">
+    <header>The Solution</header>
+    <p>In order to break this cycle, the automation industry needs a standard framework and
+software architecture which:</p>
+    <ul>
+      <li>allows independent software developers to develop applications that can be used
+across a wide variety of systems, including competing systems from different
+manufacturers and different types of similar systems.</li>
+      <li>embraces the emerging standard fieldbus protocols (BACnet, LonWorks, EIB,
+etc.) while at the same time giving full support to the existing legacy systems.</li>
+      <li>is built from the ground up on Internet standards.</li>
+    </ul>
+    <p>While this type of framework provides communications with different protocols, both
+emerging standards and legacy protocols, this is just the footing of the foundation. The
+most important step happens after the communications part of the puzzle is solved.</p>
+  </section>
+  <section class="main-section" id="Standard_Object_Model">
+    <header>Standard Object Model</header>
+    <p>The framework creates an abstraction layer that takes all of the raw data from the diverse
+field systems found in buildings, and “morphs” it into a standard software object model
+that supports all types of devices and provides standard API’s for interacting with the
+devices and their data. This allows software developers full access to all of the
+information and commands available in the target systems, enabling them to develop
+software applications that work for all of the systems that have been brought into the
+framework.</p>
+    <p>The movement to software based on object standards has profoundly affected the way
+developers create applications. The Internet has spawned a wealth of reusable software
+components and consequently a multitude of standard frameworks, which are being used
+to leverage these components. Most notably, Java-based frameworks are beginning to
+provide suites of application components, or APIs, for the development of Web-based
+business applications.</p>
+  </section>
+  <section class="main-section" id="Baja_Is_This_Standard">
+    <header>Baja Is This Standard</header>
+    <p>Just as the standards movement of the Internet made it uneconomical for software
+developers to build their own protocol stacks, Java frameworks are making it
+uneconomical for developers to create all of the software components necessary to tie
+business logic into transactional databases and Web servers. Baja does this for
+automation systems.</p>
+    <p>Developed by Tridium Inc. over the last 4 years, and based on continuous input from
+building automation manufacturers, systems integrators and industry professionals, this
+technology is now being opened up for industry-wide use through the Java Community
+Process as the Baja Standard – Building Automation Java Architecture. Baja provides a
+vendor neutral, Internet-enabled, object-based framework for automation systems.</p>
+  </section>
+  <section class="main-section" id="Anytime_Anywhere_Access">
+    <header>Anytime Anywhere Access</header>
+    <p>Baja addresses interoperability issues and at the same time takes us to the next step in the
+evolutionary process by moving this new open environment to the Internet. There is little
+question that the Internet is driving change at an unprecedented rate. The catalyst behind
+this is based on a suite of open standards for networking and data encoding that includes
+TCP/IP, HTTP, HTML, POP3, SMTP and XML. Widespread acceptance of these
+standards has created a consistent Internet infrastructure, which has allowed us to
+network the entire world. This has also positioned Web browsers as the universal client
+for deploying and retrieving information, thus obsolescing the need for proprietary user
+interface software. Baja makes building automation systems fully compatible with the
+Internet infrastructure.</p>
+  </section>  
+  <section class="main-section" id="The_Opportunity_To_Move_Forward">
+    <header>The Opportunity To Move Forward</header>
+    <p>In order for the building automation industry to reap the benefits of the Internet, and
+bypass the limits and proprietary segmentation of the past, a standards movement, much
+like the one experienced by the Internet, must occur. Only then, will the merger of open
+system protocols and Internet access give administrators the opportunity to establish fully
+Internet-enabled, real-time access to the automation and control of their buildings,
+regardless of the manufacturer, platform or operating system being used. Without open
+system standards for the building control industry, system integration and Internet access
+for most will not be options.</p>
+  </section>  
+  <section class="main-section" id="Baja_Building_Automation_Java_Architecture">
+    <header>Baja Building Automation Java Architecture</header>
+    <p>is a standards effort with the mission of
+creating an open Java platform for the building automation market. As an architecture,
+Baja is a suite of component software applications designed from day one to take
+advantage of the power of the Internet, supporting true plug-and-play, multi-vendor
+interoperability. With the framework and API standards, Baja allows development teams
+to focus on the unique qualities of their applications and the value they present to the
+user. The result is a solution that unlocks the potential of smart devices and the Internet in
+ways previously unimaginable, while providing significantly lower automation and
+information infrastructure costs.</p>
+    <p>The expert group shepherding Baja through the standards process consists of many of the
+major players in the automation industry. These include:</p>
+    <ul class="two-column">
+      <li>Tridium, Inc.</li>
+      <li>Sun Microsystems</li>
+      <li>Invensys</li>
+      <li>Honeywell</li>
+      <li>Siemens Building Technologies</li>
+      <li>Johnson Controls</li>
+      <li>Yamatake</li>
+      <li>Echelon</li>
+      <li>CPC (Emerson Electric)</li>
+      <li>The Trane Company</li>
+    </ul>
+    <p>Baja has the potential to define the building automation application environment with
+specifications that describe a set of Java APIs and XML schemas for interoperable
+control system applications. This standard is driven by the unique requirements of the
+building automation industry. It defines a standard Java architecture for programmable
+controllers, a common component architecture that enables interoperability between
+multi-vendor software and heterogeneous devices, a model that is easily used by non-
+programmers to construct control applications, and the ability to program while the
+application is running.</p>
+    <p>The Baja specification provides an opportunity to usher in a new standard for building
+automation systems. One that creates an independent open framework which will allow
+product vendors and service providers to concentrate on their value-add solutions rather
+than the underpinning technologies. The result of following a Baja standard for the
+building automation industry will be to create an environment that allows integration of
+all devices regardless of their manufacturer or their communication protocols.</p>
+    <p>For the 99 percent of existing buildings in the U.S. market that currently cannot afford to
+replace their devices to meet open system standards, this means freedom from hardware-
+lock-in and software lock-in. Baja will give System integrators the power to easily
+develop their own applications and device drivers in a user-friendly, open environment.
+They will be able to communicate with and integrate information from all the systems
+and software applications that run their buildings to meet their customers unique needs
+with best of breed solutions and complete Internet compatibility. (See Fig. 3)</p>
+  <p class="bold">Code Example for creating a NiagaraType</p>
+  <code>
+@NiagaraType
+public class BCountryRule
+  extends BTagRule
+{
+  
+  @Override
+  public Type getType() { return TYPE; }
+  public static final Type TYPE = Sys.loadType(BCountryRule.class);
+
+  public BCountryRule()
+  {
+    setCondition(new BHasTownTagCondition());
+
+    getTagList().add("countryTag", new BCountryTag());
+  }
+}
+</code>
+  <p class="bold">Code Example for gruntfile use in gradle project</p>
+  <code>
+    /* eslint-env node */
+
+"use strict";
+
+const loadTasksRelative = require('grunt-niagara/lib/loadTasksRelative');
+
+const SRC_FILES = [
+  'src/rc/**/*.js',
+  'Gruntfile.js'
+];
+const TEST_FILES = [
+  'srcTest/rc/**/*.js'
+];
+const JS_FILES = SRC_FILES.concat(TEST_FILES);
+const ALL_FILES = JS_FILES.concat('src/rc/**/*.css');
+
+module.exports = function runGrunt(grunt) {
+
+  grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
+
+    jsdoc: {
+      src: SRC_FILES.concat([ 'README.md' ])
+    },
+    eslint: {
+      src: JS_FILES,
+      options: {
+        plugins: [ 'react' ]
+      }
+    },
+    babel: {
+      options: {
+        presets: [ '@babel/preset-env' ],
+        plugins: [ '@babel/plugin-transform-react-jsx' ]
+      }
+    },
+    watch: {
+      src: ALL_FILES
+    },
+    karma: {},
+    requirejs: {},
+    niagara: {
+      station: {
+        stationName: 'uxSamples',
+        forceCopy: true,
+        sourceStationFolder: './srcTest/rc/stations/uxSamplesUnitTest'
+      }
+    }
+  });
+
+  loadTasksRelative(grunt, 'grunt-niagara');
+};
+</code>
+  <p class="bold">gradleroperties file</p>
+  <code>
+    #Uncomment and set to the path of the Gradle plugins if they are not in niagara_home
+#gradlePluginHome=
+#The path to the installation of Niagara you are building against
+niagara_home=<path\\to\\niagara_home>
+#The path to niagara_user_home for the version of Niagara you are building against
+niagara_user_home=<path\\to\\niagara_user_home>
+#Uncomment and set to the path of your node install if you are building JavaScript modules
+#nodeHome=
+nodeHome=<path\\to\\nodejs>
+#AUTOMATICALLY GENERATED BY GRADLE -- DO NOT MODIFY
+org.gradle.java.installations.auto-detect=false
+#AUTOMATICALLY GENERATED BY GRADLE -- DO NOT MODIFY
+org.gradle.java.installations.auto-download=false
+#AUTOMATICALLY GENERATED BY GRADLE -- DO NOT MODIFY
+org.gradle.java.installations.paths=<path\\to\\jre>
+</code>
+  <p class="bold">build.gradle.kts</p>
+  <code>
+    /*
+ * Copyright 2023 Tridium, Inc. All Rights Reserved.
+ */
+
+plugins {
+  // Base Niagara plugin
+  id("com.tridium.niagara")
+
+  // The vendor plugin provides the vendor {} extension to set the default group
+  // for Maven publishing; the default vendor attribute for installable
+  // manifests; and the default module and dist version for their respective
+  // manifests
+  id("com.tridium.vendor")
+
+  // The signing plugin configures signing of all executables, modules, and
+  // dists. It also registers a factory only on the root project to avoid
+  // overhead from managing signing profiles on all subprojects
+  id("com.tridium.niagara-signing")
+
+  // The niagara_home repositories convention plugin configures !bin/ext and
+  // !modules as flat-file Maven repositories to allow modules to compile against
+  // Niagara
+  id("com.tridium.convention.niagara-home-repositories")
+}
+
+
+vendor {
+  // defaultVendor sets the "vendor" attribute on module and dist files; it's
+  // what's shown in Niagara when viewing a module or dist.
+  defaultVendor("Tridium")
+
+  // defaultModuleVersion sets the "vendorVersion" attribute on all modules
+  defaultModuleVersion("1.0")
+}
+
+
+////////////////////////////////////////////////////////////////
+// Dependencies and configurations... configuration
+////////////////////////////////////////////////////////////////
+
+subprojects {
+  repositories {
+    mavenCentral()
+  }
+}
+  </code>
+  <p class="bold">Test class</p>
+  <code>/*
+ * Copyright 2023 Tridium, Inc. All Rights Reserved.
+ */
+
+package test.com.tridiumSamples.taggingSamples.tagImpliedFromAnotherTag;
+
+import static org.testng.Assert.assertEquals;
+
+import javax.baja.data.BIDataValue;
+import javax.baja.nre.annotations.NiagaraType;
+import javax.baja.sys.BComponent;
+import javax.baja.sys.BStation;
+import javax.baja.sys.BString;
+import javax.baja.sys.Sys;
+import javax.baja.sys.Type;
+import javax.baja.tag.Id;
+import javax.baja.tagdictionary.BSmartTagDictionary;
+import javax.baja.tagdictionary.BTagDictionaryService;
+import javax.baja.util.BServiceContainer;
+
+import com.tridiumSamples.taggingSamples.tagImpliedFromAnotherTag.BCountryRule;
+import com.tridiumSamples.taggingSamples.tagImpliedFromAnotherTag.BTownTag;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import com.tridium.testng.BStationTestBase;
+
+@NiagaraType
+public class BTagImpliedFromAnotherTagTest
+  extends BStationTestBase
+{
+//region /*+ ------------ BEGIN BAJA AUTO GENERATED CODE ------------ +*/
+//@formatter:off
+/*@ $test.com.tridiumSamples.taggingSamples.tagImpliedFromAnotherTag.BTagImpliedFromAnotherTagTest(2979906276)1.0$ @*/
+/* Generated Wed Oct 04 15:05:59 BST 2023 by Slot-o-Matic (c) Tridium, Inc. 2012-2023 */
+
+  //region Type
+
+  @Override
+  public Type getType() { return TYPE; }
+  public static final Type TYPE = Sys.loadType(BTagImpliedFromAnotherTagTest.class);
+
+  //endregion Type
+
+//@formatter:on
+//endregion /*+ ------------ END BAJA AUTO GENERATED CODE -------------- +*/
+
+  @Override
+  protected void configureTestStation(BStation station, String stationName, int webPort, int foxPort)
+    throws Exception
+  {
+    super.configureTestStation(station, stationName, webPort, foxPort);
+
+    BServiceContainer services = station.getServices();
+
+    BTagDictionaryService tagDictionaryService = (BTagDictionaryService) services.get("TagDictionaryService");
+    if (tagDictionaryService == null)
+    {
+      tagDictionaryService = new BTagDictionaryService();
+    }
+
+    BSmartTagDictionary smartDictionary = new BSmartTagDictionary(DICTIONARY_NAMESPACE);
+
+    smartDictionary.getTagDefinitions().add(BTownTag.TAG_NAME, new BTownTag());
+    smartDictionary.getTagRules().add("CountryRule", new BCountryRule());
+
+    tagDictionaryService.add("smartDictionary", smartDictionary);
+    services.add("TagDictionaryService", tagDictionaryService);
+
+    testComponent = new BComponent();
+    station.add("testComponent", testComponent);
+  }
+
+  @DataProvider(name = "townAndCountry")
+  private Object[][] townAndCountry()
+  {
+    return new Object[][]
+      {
+        { "London", "England" },
+        { "Birmingham", "England" },
+        { "Brighton", "England" },
+        { "Preston", "England" },
+        { "Oban", "Scotland" },
+        { "Inverness", "Scotland" },
+        { "Llanfairpwllgwyngyllgogeryrchwyrndrobwllllantysiliogogogoch", "Wales" },
+        { "Paris", "France" },
+        { "Atlantis", "not known" }
+      };
+  }
+
+  @Test(dataProvider = "townAndCountry")
+  public void getTagTest(String town, String expectedCountry)
+  {
+    testComponent.tags().set(TOWN_TAG_ID, BString.make(town));
+
+    BIDataValue returnedTagValue = testComponent.tags().get(COUNTRY_TAG_ID).orElse(null);
+
+    assertEquals(returnedTagValue.toString(), expectedCountry);
+  }
+
+  private BComponent testComponent;
+  private static final String DICTIONARY_NAMESPACE = "td";
+  private static final Id TOWN_TAG_ID = Id.newId(DICTIONARY_NAMESPACE, BTownTag.TAG_NAME);
+  private static final Id COUNTRY_TAG_ID = Id.newId(DICTIONARY_NAMESPACE, "countryTag");
+}</code>
+  </section>
+  <section class="main-section" id="The_Evolution_Has_Begun">
+    <header>The Evolution Has Begun</header>
+    <p>The Baja Java Architecture Standard is set to change the building automation industry
+forever. For the first time, developers will have a framework to develop software
+Figure 3:
+With Baja compliant
+systems, systems
+integrators have the
+ability to integrate
+homogeneous
+devices as well as the
+software running
+them. And because
+of the Baja
+architectures Java-
+based platform,
+management of
+these systems can be
+accessed from
+anywhere users can
+find an Internet or
+network connection.
+Internet
+Desktop
+Workstation
+Laptop
+Controller
+applications that not only allow multi-vendor interoperability, but also complete Internet
+compatibility.</p>
+  <p>Systems integrators will be able to dramatically modernize building automation systems,
+manufacturers will be able to offer best-of-breed products to previously inaccessible
+customers, and those customers will have the freedom to choose the best systems for their
+buildings. And in such an open environment, administrators will have complete control
+over all information and the management of their integrated systems.</p>
+  <p>The evolution to Baja is here.</p>
+  </section>
+</main>
+
+</body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+/* one media query */
+
+/* normal screen navbar on left */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  line-height: 25px;
+}
+
+header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+#navbar {
+  position: fixed;
+  width: 200px;
+  height: 100vh;
+  background-color: #fff;
+}
+
+#navbar header {
+  text-align: center;
+}
+
+#navbar a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0 10px 10px;
+}
+
+#navbar a:hover {
+  background-color: lightgrey;
+}
+
+#main-doc {
+  margin: 0 0 0 200px;
+  padding: 10px;
+  background-color: whitesmoke;
+}
+
+.main-section p {
+  text-indent: 20px;
+}
+
+.main-section p:not(first-of-type) {
+  margin-top: 20px;
+}
+
+#Baja_Building_automation_Java_architecture > p[class="bold"] {
+  margin-bottom: 10px;
+}
+
+.orange {
+  color: orange;
+}
+
+.rotate {
+  display: inline-flex;
+  transform: rotate(7deg);
+}
+
+li {
+  list-style-type: none;
+}
+
+@media (max-width: 600px) {
+  #navbar {
+    width: 200px;
+  }
+}
+
+** end of undefined **
+

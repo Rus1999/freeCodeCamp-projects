@@ -1,0 +1,121 @@
+** start of undefined **
+
+<!doctype html>
+<html>
+<head>
+  <title>freeCodeCamp Challenge Survey Form</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1 id="title">Personality Check!</h1>
+  <p id="description">Explore what your personality may be hold.</p>
+  <form id="survey-form">
+    <fieldset>
+      <legend>About You</legend>
+      <label for="name" id="name-label">
+        Your name
+        <input type="text" id="name" name="name" placeholder="John Doe" required>
+      </label>
+      <label for="email" id="email-label">
+        Email
+        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+      </label>
+    </fieldset>
+    <fieldset>
+      <legend>Your Favorite ?</legend>
+      <label for="number" id="number-label">
+        Lucky Number (1 digit)
+        <input type="number" id="number" name="lucky-number" min="0" max="9" placeholder="7">
+      </label>
+      <label for="dropdown">Pet
+        <select id="dropdown" name="pets">
+          <option value="1">Cat</option>
+          <option value="2">Dog</option>
+          <option value="3">Other</option>
+        </select>
+      </label>
+      <label>Sweet or Spicy</label>
+      <p>What goal you want to achieve</p>
+        <label>
+          <input type="checkbox" value="millionair"> Millionair
+        </label>
+        <label>
+          <input type="checkbox" value="tranqulity"> Tranquility
+        </label>
+      <p>Sweet or Spicy</p>
+      <label id="sweet">
+        <input type="radio" id="sweet" name="sweet-or-spicy" value="sweet"> Sweet
+      </label>
+      <label id="spicy">
+        <input type="radio" id="spicy" name="sweet-or-spicy" value="spicy"> Spicy
+      </label>
+      <label>Your thought <textarea cols="25" placeholder="I Like this form very very much."></textarea> </label>
+    </fieldset>
+
+    <input type="submit" value="Submit" id="submit">
+  </form>
+</body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+html {  
+  background-image: linear-gradient(90deg, #A100FFFF 0%, #71C4FFFF 100%);
+}
+
+body {
+  padding: 25px;
+  background-color: rgba(255, 255, 255, .7);
+  min-width: 200px;
+  max-width: 500px;
+  width: 70vw;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  margin: 25px auto;
+}
+
+#title, #description {
+  text-align: center;
+}
+
+fieldset {
+  border: none;
+}
+
+legend, p {
+  font-weight: bold;
+}
+
+label, 
+input[type="text"],
+input[type="email"],
+textarea {
+  display: block;
+  margin: 10px;
+  width: 95%;
+  border: none;
+}
+
+textarea {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#submit {
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  padding: 5px 0;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  background: #E32379;
+  background: linear-gradient(135deg, #E32379, #DCD4A4);
+}
+
+** end of undefined **
+
