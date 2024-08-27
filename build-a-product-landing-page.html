@@ -2,22 +2,162 @@
 
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tiny Computer at your hand</title>
-  <link rel="stylesheet" href="./styles.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .title {
+      font-size: 2rem;
+      font-weight: 500;
+      margin-top: 5px;
+      margin-left: 10px;
+    }
+
+    #nav-bar {
+      position: fixed;
+      top: 0;
+      background-color: indianred;
+      width: 100%;
+      color: whitesmoke;
+    }
+
+    #nav-bar ul {
+      list-style-type: none;
+    }
+
+    #nav-bar li {
+      float: right;
+    }
+
+    #nav-bar li:nth-child(-n+2) {
+      float: left;
+    }
+
+    #nav-bar a {
+      display: block;
+      padding: 20px 20px 10px 10px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    #nav-bar a:visited,
+    #nav-bar a {
+      color: whitesmoke;
+    }
+
+    #nav-bar a:hover {
+      color: black;
+      transform: scale(1.2);
+      transition: .5s;
+    }
+
+    #header-img {
+      width: 50px;
+      height: 50px;
+      position: relative;
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+
+    #Product {
+      margin-top: 70px;
+    }
+
+    #Product,
+    #Our_Story,
+    #Contact_Us {
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+
+    #video {
+      display: block;
+      margin: auto;
+      padding: 25px;
+    }
+
+    h2 {
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+
+    p {
+      text-indent: 20px;
+      text-align: justify;
+    }
+
+    #form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #form fieldset {
+      border: none;
+      margin-bottom: 20px;
+    }
+
+    #form legend {
+      margin-bottom: 10px;
+    }
+
+    #form #email {
+      border-radius: 10px;
+      width: 80vw;
+      height: 25px;
+      padding: 10px;
+    }
+
+    #form #submit {
+      padding: 5px;
+      border-radius: 10px;
+      background: whitesmoke;
+      width: 80vw;
+    }
+
+    #footer {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    @media (max-width: 600px) {
+      #nav-bar {
+        display: flex;
+      }
+
+      #video {
+        width: 80vw;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <header id="header">
     <nav id="nav-bar">
       <ul>
         <li class="title">Tiny PC </li>
-        <li><img src="https://s.cafebazaar.ir/images/icons/any.icon-7dd4ca6c-40a4-418f-a637-a5a3981ac76c_512x512.png?x-img=v1/resize,h_256,w_256,lossless_false/optimize"
-    id="header-img"></li>
-        <li><a href="#Product" class="nav-link" >Product</a></li>
-        <li><a href="#Our_Story" class="nav-link" >Our Story</a></li>
-        <li><a href="#Contact_Us" class="nav-link" >Contact Us</a></li>
+        <li><img
+            src="https://s.cafebazaar.ir/images/icons/any.icon-7dd4ca6c-40a4-418f-a637-a5a3981ac76c_512x512.png?x-img=v1/resize,h_256,w_256,lossless_false/optimize"
+            id="header-img"></li>
+        <li><a href="#Product" class="nav-link">Product</a></li>
+        <li><a href="#Our_Story" class="nav-link">Our Story</a></li>
+        <li><a href="#Contact_Us" class="nav-link">Contact Us</a></li>
         <li><a href="#video" class="nav-link">Video</a></li>
         <li><a href="#footer" class="nav-link">Footer</a></li>
       </ul>
@@ -25,12 +165,18 @@
   </header>
   <section id="Product">
     <h2>Product</h2>
-    <p>Can you imagine what it be like to hold an entire personal computer at the palm of your hand. That's our Tiny PC with versitile connection equip with tiny screen for your anywhere use and have a standard display output HDMI, VGA with mini monitor build in.</p>
-    <iframe id="video" width="410" height="250" src="https://www.youtube.com/embed/Lnxj1ltd5vk?si=mk7s1ndsfrZKoWbO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <p>Can you imagine what it be like to hold an entire personal computer at the palm of your hand. That's our Tiny PC
+      with versitile connection equip with tiny screen for your anywhere use and have a standard display output HDMI,
+      VGA with mini monitor build in.</p>
+    <iframe id="video" width="410" height="250" src="https://www.youtube.com/embed/Lnxj1ltd5vk?si=mk7s1ndsfrZKoWbO"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </section>
   <section id="Our_Story">
     <h2>Our Story</h2>
-    <p>With our passion to build tiny pc that can be portable to anywhere can be use anywhere and with this and our team consist of me Punyarit and Tiraynup we pround to tell you that our dream have come true.</p>
+    <p>With our passion to build tiny pc that can be portable to anywhere can be use anywhere and with this and our team
+      consist of me Punyarit and Tiraynup we pround to tell you that our dream have come true.</p>
   </section>
   <section id="Contact_Us">
     <h2>Contact Us</h2>
@@ -44,145 +190,5 @@
   </section>
   <section id="footer">Punyarit Klaphachon @freeCodeCamp.com</section>
 </body>
+
 </html>
-
-** end of undefined **
-
-** start of undefined **
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.title {
-  font-size: 2rem;
-  font-weight: 500;
-  margin-top: 5px;
-  margin-left: 10px;
-}
-
-#nav-bar {
-  position: fixed;
-  top: 0;
-  background-color: indianred;
-  width: 100%;
-  color: whitesmoke;
-}
-
-#nav-bar ul {
-  list-style-type: none;
-}
-
-#nav-bar li {
-  float: right;
-}
-
-#nav-bar li:nth-child(-n+2) {
-  float: left;
-}
-
-#nav-bar a {
-  display: block;
-  padding: 20px 20px 10px 10px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-#nav-bar a:visited, #nav-bar a {
-  color: whitesmoke;
-}
-
-#nav-bar a:hover {
-  color: black;
-  transform: scale(1.2);
-  transition: .5s;
-}
-
-#header-img {
-  width: 50px;
-  height: 50px;
-  position: relative;
-  vertical-align: middle;
-  margin-left: 10px;
-}
-
-#Product {
-  margin-top: 70px;
-}
-
-#Product, #Our_Story, #Contact_Us {
-  margin-left: 40px;
-  margin-right: 40px;
-}
-
-#video {
-  display: block;
-  margin: auto;
-  padding: 25px;
-}
-
-h2 {
-  font-weight: bold;
-  letter-spacing: 1.5px;
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-
-p {
-  text-indent: 20px;
-  text-align: justify;
-}
-
-#form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#form fieldset {
-  border: none;
-  margin-bottom: 20px;
-}
-
-#form legend {
-  margin-bottom: 10px;
-}
-
-#form #email {
-  border-radius: 10px;
-  width: 80vw;
-  height: 25px;
-  padding: 10px;
-}
-
-#form #submit {
-  padding: 5px;
-  border-radius: 10px;
-  background: whitesmoke;
-  width: 80vw;
-}
-
-#footer {
-  text-align: center;
-  margin-top: 15px;
-}
-
-@media (max-width: 600px) {
-  #nav-bar {
-    display: flex;
-  }
-
-  #video {
-    width: 80vw;
-  }
-}
-
-** end of undefined **
-

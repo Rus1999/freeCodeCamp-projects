@@ -2,11 +2,70 @@
 
 <!doctype html>
 <html>
+
 <head>
   <title>freeCodeCamp Challenge Survey Form</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    html {
+      background-image: linear-gradient(90deg, #A100FFFF 0%, #71C4FFFF 100%);
+    }
+
+    body {
+      padding: 25px;
+      background-color: rgba(255, 255, 255, .7);
+      min-width: 200px;
+      max-width: 500px;
+      width: 70vw;
+      border-radius: 20px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      margin: 25px auto;
+    }
+
+    #title,
+    #description {
+      text-align: center;
+    }
+
+    fieldset {
+      border: none;
+    }
+
+    legend,
+    p {
+      font-weight: bold;
+    }
+
+    label,
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      display: block;
+      margin: 10px;
+      width: 95%;
+      border: none;
+    }
+
+    textarea {
+      border-radius: 5px;
+      padding: 10px;
+    }
+
+    #submit {
+      margin-top: 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      padding: 5px 0;
+      width: 100%;
+      color: white;
+      font-weight: bold;
+      background: #E32379;
+      background: linear-gradient(135deg, #E32379, #DCD4A4);
+    }
+  </style>
 </head>
+
 <body>
   <h1 id="title">Personality Check!</h1>
   <p id="description">Explore what your personality may be hold.</p>
@@ -37,12 +96,12 @@
       </label>
       <label>Sweet or Spicy</label>
       <p>What goal you want to achieve</p>
-        <label>
-          <input type="checkbox" value="millionair"> Millionair
-        </label>
-        <label>
-          <input type="checkbox" value="tranqulity"> Tranquility
-        </label>
+      <label>
+        <input type="checkbox" value="millionair"> Millionair
+      </label>
+      <label>
+        <input type="checkbox" value="tranqulity"> Tranquility
+      </label>
       <p>Sweet or Spicy</p>
       <label id="sweet">
         <input type="radio" id="sweet" name="sweet-or-spicy" value="sweet"> Sweet
@@ -56,66 +115,5 @@
     <input type="submit" value="Submit" id="submit">
   </form>
 </body>
+
 </html>
-
-** end of undefined **
-
-** start of undefined **
-
-html {  
-  background-image: linear-gradient(90deg, #A100FFFF 0%, #71C4FFFF 100%);
-}
-
-body {
-  padding: 25px;
-  background-color: rgba(255, 255, 255, .7);
-  min-width: 200px;
-  max-width: 500px;
-  width: 70vw;
-  border-radius: 20px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  margin: 25px auto;
-}
-
-#title, #description {
-  text-align: center;
-}
-
-fieldset {
-  border: none;
-}
-
-legend, p {
-  font-weight: bold;
-}
-
-label, 
-input[type="text"],
-input[type="email"],
-textarea {
-  display: block;
-  margin: 10px;
-  width: 95%;
-  border: none;
-}
-
-textarea {
-  border-radius: 5px;
-  padding: 10px;
-}
-
-#submit {
-  margin-top: 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  padding: 5px 0;
-  width: 100%;
-  color: white;
-  font-weight: bold;
-  background: #E32379;
-  background: linear-gradient(135deg, #E32379, #DCD4A4);
-}
-
-** end of undefined **
-

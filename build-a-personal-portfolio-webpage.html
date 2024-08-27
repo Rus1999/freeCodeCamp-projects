@@ -2,153 +2,152 @@
 
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rus P. Klaphachon</title>
   <style>
-* {
-  padding: 0;
-  margin: 0;
-  font-family: sans-serif;
-}
+    * {
+      padding: 0;
+      margin: 0;
+      font-family: sans-serif;
+    }
 
-body {
-  width: calc(100vw-50px);
-  height: 100vh;
-  background: whitesmoke;
-  /* margin: 100px 50px; */
-    background: white;
-}
+    body {
+      width: calc(100vw-50px);
+      height: 100vh;
+      background: whitesmoke;
+      /* margin: 100px 50px; */
+      background: white;
+    }
 
-#navbar {
-  position: fixed;
-  top: 0;
-  left: 10vw;
-  background: black;
-  height: 3rem;
-  width: 80vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  border-radius: 30px;
-  margin-top: 10px;
-}
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 10vw;
+      background: black;
+      height: 3rem;
+      width: 80vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      border-radius: 30px;
+      margin-top: 10px;
+    }
 
-#navbar>ul {
-  display: inline;
-}
+    #navbar>ul {
+      display: inline;
+    }
 
-#navbar>ul>li {
-  list-style-type: none;
-  display: inline-flex;
-}
+    #navbar>ul>li {
+      list-style-type: none;
+      display: inline-flex;
+    }
 
-#navbar > ul > li > a {
-  text-decoration: none;
-  font-size: 1.2rem;
-  color: palevioletred;
-  font-weight: bold;
-  padding-left: 10px
-}
+    #navbar>ul>li>a {
+      text-decoration: none;
+      font-size: 1.2rem;
+      color: palevioletred;
+      font-weight: bold;
+      padding-left: 10px
+    }
 
-#navbar > ul > li > a:visited {
-  color: palevioletred;
-}
+    #navbar>ul>li>a:visited {
+      color: palevioletred;
+    }
 
-#navbar > ul > li > a:hover {
-  color: white;
-}
+    #navbar>ul>li>a:hover {
+      color: white;
+    }
 
-#welcome-section {
-  width: 100%;
-  text-align: center;
-  font-size: 3rem;
-  height: 61vh;
-  padding-top: 40vh;
-background: #0F2027;
-background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
-background: linear-gradient(to right, #2C5364, #203A43, #0F2027); 
-  color: whitesmoke;
-}
+    #welcome-section {
+      width: 100%;
+      text-align: center;
+      font-size: 3rem;
+      height: 61vh;
+      padding-top: 40vh;
+      background: #0F2027;
+      background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+      background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+      color: whitesmoke;
+    }
 
-#projects {
-  padding: 3rem;
- background: rgb(255,255,255);
-background: gray;
-color: white;
-}
+    #projects {
+      padding: 3rem;
+      background: rgb(255, 255, 255);
+      background: gray;
+      color: white;
+    }
 
-#projects h2 {
-  font-size: 3rem;
-  text-align: center;
-}
+    #projects h2 {
+      font-size: 3rem;
+      text-align: center;
+    }
 
-.project-tile {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  border-radius: 20px;
-  padding: 20px;
-  background: rgba(255, 255, 255, .3);
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
+    .project-tile {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      border-radius: 20px;
+      padding: 20px;
+      background: rgba(255, 255, 255, .3);
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
 
-.project-tile div {
-  width: 200px;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: white;
-  margin: 5px;
-  border-radius: 20px;
-  color: black;
-}
+    .project-tile div {
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      margin: 5px;
+      border-radius: 20px;
+      color: black;
+    }
 
-.project-tile div:hover {
-  transform: scale(1.5);
-  transition: .5s ease-in-out;
-  box-shadow: 0px 0px 15px gray;
-}
+    .project-tile div:hover {
+      transform: scale(1.5);
+      transition: .5s ease-in-out;
+      box-shadow: 0px 0px 15px gray;
+    }
 
-.project-tile div a {
-  color: black;
-  text-decoration: none;
-}
+    .project-tile div a {
+      color: black;
+      text-decoration: none;
+    }
 
-@media (max-width: 750px) {
-  #navbar {
-    flex-direction: column;
-    height: 100px;
-  }
+    @media (max-width: 750px) {
+      #navbar {
+        flex-direction: column;
+        height: 100px;
+      }
 
-  #navbar>ul {
-    display: block;
-  }
-}
+      #navbar>ul {
+        display: block;
+      }
+    }
 
-@media (max-width: 400px) {
-  #navbar {
-    flex-direction: column;
-    height: 100px;
-  }
+    @media (max-width: 400px) {
+      #navbar {
+        flex-direction: column;
+        height: 100px;
+      }
 
-  #navbar>ul {
-    display: block;
-  }
+      #navbar>ul {
+        display: block;
+      }
 
-  #navbar>ul>li>a {
-    display: block;
-  }
-}
-
-
-
+      #navbar>ul>li>a {
+        display: block;
+      }
+    }
   </style>
 </head>
+
 <body>
   <nav id="navbar">
     <ul>
@@ -180,5 +179,5 @@ color: white;
     </section>
   </section>
 </body>
-</html>
 
+</html>
